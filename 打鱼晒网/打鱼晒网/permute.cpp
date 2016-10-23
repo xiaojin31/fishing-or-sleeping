@@ -18,7 +18,9 @@ void f(int &x,int &y)
 }
 void g(int &x,int &y)
 {
-	int t = x+y;
-	y = x;
-	x = t-y;
+	int t = x;
+	int *p = &x;
+	*p = y;
+	int *q = &y;
+	*q = t;
 }
